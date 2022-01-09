@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Slider from 'react-input-slider';
 
-const Temp = ({ name, title, controlName }: any) => {
+const Temp = ({ name, title, controlName, data }: any) => {
   const [checked, setChecked] = useState(false);
   const [value, setValue] = useState(18);
   const handleChange = (a: any) => {
     setChecked(a);
   };
-
+  useEffect(() => {
+    if (data) setValue(data[0]?.value);
+  }, [data]);
   const renderColor = () => {
     if (value <= 20) return '#40FC00';
     if (value > 20 && value < 27) return '#e4d411f2';

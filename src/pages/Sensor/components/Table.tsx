@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Slider from 'react-input-slider';
 
-const Table = ({ name, min, max, value, color }: any) => {
+const Table = ({ name, min, max, value, color, info }: any) => {
   const [checked, setChecked] = useState(false);
   const handleChange = (a: any) => {
     setChecked(a);
@@ -16,7 +16,7 @@ const Table = ({ name, min, max, value, color }: any) => {
   return (
     <CardContainer>
       <table>
-        <thead/>
+        <thead />
         <tbody>
           <tr>
             {[
@@ -40,17 +40,17 @@ const Table = ({ name, min, max, value, color }: any) => {
           <tr>
             <td>Container Tracker</td>
             <td>Asset</td>
-            <td>86</td>
-            <td>78</td>
-            <td>78</td>
+            <td>{info?.Battery && info?.Battery[0] && info?.Battery[0]?.value}</td>
+            <td>{info?.Humidity1 && info?.Humidity1[0] && info?.Humidity1[0]?.value}</td>
+            <td>{info?.Humidity2 && info?.Humidity2[0] && info?.Humidity2[0]?.value}</td>
 
-            <td>78</td>
-            <td>78</td>
-            <td />
-            <td>OFF</td>
-            <td>18</td>
-            <td />
-            <td />
+            <td>{info?.Temperature1 && info?.Temperature1[0] && info?.Temperature1[0]?.value}</td>
+            <td>{info?.Temperature2 && info?.Temperature2[0] && info?.Temperature2[0]?.value}</td>
+            <td>{info['State'] && info['State'][0] && info['State'][0]?.value}</td>
+            <td/>
+            <td>{info['Temperature DaiKin'] && info['Temperature DaiKin'][0] && info['Temperature DaiKin'][0]?.value}</td>
+            <td>{info['State Fan'] && info['State Fan'][0] && info['State Fan'][0]?.value}</td>
+            <td>{info['State Light'] && info['State Light'][0] && info['State Light'][0]?.value}</td>
             <td />
           </tr>
         </tbody>

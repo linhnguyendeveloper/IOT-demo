@@ -47,7 +47,7 @@ const Temp = ({ name, min, max, value ,color}: any) => {
         <Min>{min}</Min>
         <Max>{max}</Max>
 
-        <StatusOn >{value?.toFixed(2)}</StatusOn>
+        <StatusOn >{value}</StatusOn>
         <Name>{name}</Name>
       </ControlContainer>
     </CardContainer>

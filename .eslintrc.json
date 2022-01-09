@@ -41,6 +41,7 @@
     "arrow-parens": "off",
     "arrow-spacing": "error",
     "no-console": "off",
+    "dot-notation":"off",
     "react/self-closing-comp": [
       "warn",
       {
