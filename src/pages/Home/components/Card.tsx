@@ -2,16 +2,17 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Switch from 'react-switch';
 
-const Card = ({ name, title, controlName, data }: any) => {
+const Card = ({ name, title, controlName, data, update }: any) => {
   const [checked, setChecked] = useState(false);
   useEffect(() => {
     if (data) setChecked(data[0]?.value?.toLowerCase() === 'on');
   }, [data]);
   const handleChange = (a: any) => {
     setChecked(a);
+    update(a ? 'ON' : 'OFF');
   };
-  console.log({data,name});
-  
+  console.log({ data, name });
+
   return (
     <CardContainer>
       <ControlContainer>
