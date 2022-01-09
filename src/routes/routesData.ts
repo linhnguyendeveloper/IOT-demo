@@ -1,6 +1,5 @@
 import HomePage from 'pages/Home';
 import Sensor from 'pages/Sensor';
-import GPS from 'pages/GPS';
 
 import { FunctionComponent } from 'react';
 
@@ -31,10 +30,5 @@ const publicRoutes: RouteType[] = [
     component: HomePage,
     exact: true
   },
-  {
-    path: routesEnum.gps,
-    component: GPS,
-    exact: true
-  }
 ];
 export { privateRoutes, publicRoutes };
