@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle<{ theme: ThemeTypes }>`
   }
 
   html,body {
-    margin: 0;
+    margin: 0!important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: ${({ theme }) => theme.background};

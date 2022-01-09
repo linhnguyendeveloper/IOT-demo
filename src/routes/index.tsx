@@ -8,7 +8,7 @@ const Routes = (
   <>
     <Helmet>
       <html lang='en' />
-      <title>X-Wallet</title>
+      <title>IOT</title>
       <meta property='og:title' content='' />
       <meta property='twitter:title' content='' />
       <meta name='description' content='' />
